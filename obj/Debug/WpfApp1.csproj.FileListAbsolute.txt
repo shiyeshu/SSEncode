@@ -1,0 +1,15 @@
+C:\Users\S\source\repos\WpfApp1\WpfApp1\bin\Debug\编码助手.exe.config
+C:\Users\S\source\repos\WpfApp1\WpfApp1\bin\Debug\编码助手.exe
+C:\Users\S\source\repos\WpfApp1\WpfApp1\bin\Debug\编码助手.pdb
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\编码助手_MarkupCompile.cache
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\编码助手_MarkupCompile.lref
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\编码助手.g.resources
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\编码助手.exe
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Debug\编码助手.pdb
