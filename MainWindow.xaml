@@ -5,28 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="SSEncode" Height="450" Width="311">
+        Title="编码转换小工具" Height="450" Width="311">
     <Grid RenderTransformOrigin="0.509,0.501" Cursor="" Margin="0,0,12,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="204*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="283*"/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="Button1" Content="base64编码" HorizontalAlignment="Left" Height="27" Margin="30,155,0,0" VerticalAlignment="Top" ForceCursor="True" Click="Button1_Click" Grid.Column="2" Width="100"/>
-        <Button x:Name="Button2" Content="base64解码" HorizontalAlignment="Left" Height="27" Margin="156,155,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" Click="Button2_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="Button2" Content="base64解码" HorizontalAlignment="Left" Height="27" Margin="156,155,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" Click="Button2_Click"/>
         <Button x:Name="Button3" Content="unicode编码" HorizontalAlignment="Left" Height="27" Margin="30,200,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" Click="Button3_Click"/>
-        <Button x:Name="Button4" Content="unicode解码" HorizontalAlignment="Left" Height="27" Margin="156,200,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" Click="Button4_Click" Grid.ColumnSpan="3"/>
-        <TextBox Name="TextBox" HorizontalAlignment="Left" Height="140" Margin="10,10,0,0" TextWrapping="Wrap" Text="请输入..." VerticalAlignment="Top" Width="252" TextChanged="TextBox_TextChanged" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <Button x:Name="Button4" Content="unicode解码" HorizontalAlignment="Left" Height="27" Margin="156,200,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2" Click="Button4_Click"/>
+        <TextBox Name="TextBox" HorizontalAlignment="Left" Height="140" Margin="10,10,0,0" TextWrapping="Wrap" Text="请输入..." VerticalAlignment="Top" Width="252" TextChanged="TextBox_TextChanged" Grid.Column="2"/>
         <Button Content="URL编码" Grid.Column="2" HorizontalAlignment="Left" Margin="30,250,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_1"/>
-        <Button Content="URL解码" Grid.Column="2" HorizontalAlignment="Left" Margin="156,250,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_2" Grid.ColumnSpan="3"/>
+        <Button Content="URL解码" Grid.Column="2" HorizontalAlignment="Left" Margin="156,250,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_2"/>
         <Button Content="html实体编码" Grid.Column="2" HorizontalAlignment="Left" Margin="91,339,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_3"/>
         <Button Content="utf-8 -&gt; gb2312" Grid.Column="2" HorizontalAlignment="Left" Margin="30,291,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_5"/>
-        <Button Content="gb2312 -&gt; utf-8" Grid.Column="2" HorizontalAlignment="Left" Margin="156,291,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_4" Grid.ColumnSpan="3"/>
+        <Button Content="gb2312 -&gt; utf-8" Grid.Column="2" HorizontalAlignment="Left" Margin="156,291,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_4"/>
         <Button Content="关于" Grid.Column="2" HorizontalAlignment="Left" Margin="91,382,0,0" VerticalAlignment="Top" Width="100" Height="27" Click="Button_Click_6"/>
-        <Button Name="zhiding" Grid.ColumnSpan="3" Content="置&#x0a;顶" HorizontalAlignment="Left" Height="140" Margin="0,10,0,0" Width="19" VerticalAlignment="Top" Click="Button_Click_8"/>
     </Grid>
 </Window>

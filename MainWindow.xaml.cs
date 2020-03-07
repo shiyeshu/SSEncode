@@ -71,58 +71,63 @@ namespace WpfApp1
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
             String s = TextBox.Text;
-            
-
-            string dst = "";
-            char[] src = s.ToCharArray();
-
-            for (int i = 0; i < src.Length; i++)
+            if ((s.Length % 2) != 0)
             {
-
-                byte[] bytes = Encoding.BigEndianUnicode.GetBytes(src[i].ToString());
-                string str = @"\u" + bytes[0].ToString("X2") + bytes[1].ToString("X2");
-                dst += str;
-
+                s += " ";//空格
+                         //throw new ArgumentException("s is not valid chinese string!");
             }
-            TextBox.Text = dst;
+            System.Text.Encoding chs = System.Text.Encoding.GetEncoding("utf-8");
+            byte[] bytes = chs.GetBytes(s);
+
+            string str = "";
+
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                str +=  string.Format("{0:X}", bytes[i]);
+               
+            }
+            TextBox.Text = str;
         }
 
         private void Button4_Click(object sender, RoutedEventArgs e)
         {
-            string dst = "";
             String hex = TextBox.Text;
-            int len = hex.Length / 6;
+            if (hex == null)
+                throw new ArgumentNullException("hex");
+            hex = hex.Replace(",", "");
+            hex = hex.Replace("\n", "");
+            hex = hex.Replace("\\", "");
+            hex = hex.Replace(" ", "");
+            if (hex.Length % 2 != 0)
+            {
+                hex += "20";//空格
+            }
+            // 需要将 hex 转换成 byte 数组。 
+            byte[] bytes = new byte[hex.Length / 2];
 
-            
-            for (int i = 0; i <= len - 1; i++)
+            for (int i = 0; i < bytes.Length; i++)
             {
                 try
                 {
-                    string str = "";
-                    str = hex.Substring(0, 6).Substring(2);
-                    hex = hex.Substring(6);
-                    byte[] bytes = new byte[2];
-                    bytes[1] = byte.Parse(int.Parse(str.Substring(0, 2), System.Globalization.NumberStyles.HexNumber).ToString());
-                    bytes[0] = byte.Parse(int.Parse(str.Substring(2, 2), System.Globalization.NumberStyles.HexNumber).ToString());
-                    dst += Encoding.Unicode.GetString(bytes);
+                    // 每两个字符是一个 byte。 
+                    bytes[i] = byte.Parse(hex.Substring(i * 2, 2),
+                    System.Globalization.NumberStyles.HexNumber);
                 }
                 catch
                 {
                     MessageBox.Show("这里出现了异常，可能是因为输入内容有误");
-                    return;  //
+                    return ;  //
 
                 }
-
             }
-           
-           
-                
-
-            //System.Text.Encoding chs = System.Text.Encoding.GetEncoding("utf-8");
-            TextBox.Text= dst;
+            System.Text.Encoding chs = System.Text.Encoding.GetEncoding("utf-8");
+            TextBox.Text= chs.GetString(bytes);
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("版本编号V0.1");
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -221,25 +226,7 @@ namespace WpfApp1
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("版本V1.1 \nby:阿硕\n2020/2/29","关于");
-        }
-
-
-
-
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-            if (this.Topmost == true)
-            {
-                this.Topmost = false;
-                zhiding.Content = "置\n顶";
-            }
-            else
-            {
-                this.Topmost = true;
-                zhiding.Content = "已\n置\n顶";
-            }
+            MessageBox.Show("版本V1.0 \nby:阿硕\n2020/1/13","关于");
         }
     }
 }
