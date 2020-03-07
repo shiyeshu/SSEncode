@@ -12,3 +12,4 @@ C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Release\WpfApp1.csproj.GenerateResou
 C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Release\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Release\编码助手.exe
 C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Release\编码助手.pdb
+C:\Users\S\source\repos\WpfApp1\WpfApp1\obj\Release\WpfApp1.csprojAssemblyReference.cache
